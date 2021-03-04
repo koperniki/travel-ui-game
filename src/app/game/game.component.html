@@ -1,0 +1,8 @@
+<ng-template ngFor let-state [ngForOf]="$transferData | async">
+    <button mat-raised-button class="center" color="warn"  [class.mat-warn]="state.state">
+      Команда {{state.number}}
+    </button>
+  </ng-template>
+  <button mat-raised-button class="center" color="primary" (click)=onRelease()>
+    Сброс
+  </button>
